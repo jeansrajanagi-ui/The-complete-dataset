@@ -1,0 +1,720 @@
+{"text": "Quantum computing harnesses quantum mechanics for computation. The fundamental unit: qubit. Unlike classical bits (0 or 1), qubits can be in superposition (both simultaneously) until measured. This exponential state space enables exponential parallelism for certain problems.
+
+The superposition: |ψ⟩ = α|0⟩ + β|1⟩, where |α|² + |β|² = 1. The amplitudes α, β determine measurement probabilities.
+
+The entanglement: qubits correlated beyond classical. The Bell state: |Φ⁺⟩ = (|00⟩ + |11⟩)/√2. One measurement instantly determines the other.
+
+The quantum gates: unitary transformations. Hadamard (H): creates superposition. Pauli (X, Y, Z): rotations. CNOT: entangles control and target. The circuit model.
+
+The measurement: collapses superposition to definite state. The probability: |amplitude|². Disturbs quantum state - cannot clone.
+
+The quantum algorithms: Shor's algorithm for factoring (exponential speed-up). Grover's algorithm for search (√N speed-up). The quantum supremacy claimed.
+
+The challenge: decoherence. Qubits interact with environment. The error rates: orders of magnitude higher than classical. The correction overhead.
+
+The quantum error correction: multiple physical qubits per logical. Surface code: leading approach. Threshold theorem: below threshold, error correction works.
+
+The NISQ era: Noisy Intermediate-Scale Quantum. The hundreds of noisy qubits. The variational algorithms use classical optimizer.
+
+The applications: quantum chemistry, optimization, cryptography breaking. The simulation: natural quantum systems. The materials science.
+
+The post-quantum cryptography: lattice-based, code-based. The NIST standardization. The preparation for quantum computers.
+
+The programming model: circuit model, measurement, feedback. IBM Q, Rigetti, IonQ. The cloud access common. The Python SDKs available.
+
+The key insight: quantum provides different computational model, not universal speed-up. The class of problems solved exponentially faster is small but important.
+
+The future: fault-tolerant quantum computing decades away. The current: NISQ algorithms, error mitigation, hybrid classical-quantum.
+
+The quantum represents the limit of computation. The Turing machine model may fail. The halting problem may become uncomputable.
+
+The quantum mechanics and computation: fundamental limits. The complexity classes: BQP (Bounded-error Quantum Polynomial). P ⊆ BQP ⊆ PSPACE.
+
+This is the next frontier. The investment, research, and talent increasing. The field advancing rapidly. Understanding allows informed decisions.", "meta": {"phase": 4, "topic": "quantum_computing", "subtopic": "quantum_extended", "sequence": 222}}
+{"text": "Computer graphics: rendering visual content. The pipeline: application, geometry, rasterization, fragment. The stages transform, test, combine.
+
+The transformation: model space → world → view → projection → screen. The matrix operations. The perspective division.
+
+The shading: calculate color at fragments. Phong model: ambient + diffuse + specular. The Lambert diffuse: dot(Normal, Light).
+
+The textures: images mapped to geometry. The UV coordinates define mapping. The bilinear/trilinear filtering smooths. The mipmaps precompute.
+
+The rasterization: convert primitives to fragments. The scan conversion. The hidden surface removal: Z-buffer.
+
+The shadows: shadow mapping renders from light. The shadow volumes stencil. The PCF softens edges.
+
+The global illumination: ray tracing/pathtracing. The path: bounce light. The importance sampling. The acceleration structure: BVH.
+
+The anti-aliasing: MSAA, FXAA, TAA. The subpixel issues at edges. The trade-off: quality vs performance.
+
+The shaders: GLSL, HLSL. The vertex, fragment, compute shaders. The GPGPU: general code on graphics hardware.
+
+The animation: keyframes, interpolation. The skeletal animation: bones influence vertices. The physics simulation.
+
+The physics: rigid body dynamics. The collision detection. The constraint solver. The game physics engines.
+
+The particle systems: positions, velocities, lifetimes. The flocking: separation, alignment, cohesion. The fire, smoke.
+
+The computer graphics is ubiquitous. Video games, movies, CAD, visualization. The real-time vs offline renders.
+
+The real-time: 30-60+ fps. The optimization: culling, level of detail. The GPU is specialized.
+
+The ray tracing: the future of rendering. The RTX hardware. The hybrid rendering. The quality/performance.
+
+The graphics programming requires math, algorithms, optimization. The understanding and experimentation.", "meta": {"phase": 3, "topic": "computer_graphics", "subtopic": "graphics_extended", "sequence": 223}}
+{"text": "Natural language processing: computational models of human language. The challenges: ambiguity, variation, context.
+
+The tokenization: split text. WordPiece, BPE. The subword handling unknown words. The vocabulary.
+
+The embeddings: dense vectors representing meaning. Word2Vec, GloVe, fastText. Similar meaning similar vectors.
+
+The contextual embeddings: BERT, ELMo. Different embedding for same word in context. The attention provides context.
+
+The sequence labeling: POS tagging, NER. CRF models. BIO tagging scheme for entities.
+
+The parsing: syntactic structure. Constituency (phrase structure), dependency (word relations). Berkeley Parser, spaCy.
+
+The language model: probability of sequence. The n-gram models. The neural language models. The perplexity measures.
+
+The text classification: spam detection, sentiment analysis. The features. The pretrained transformer fine-tuning.
+
+The sequence-to-sequence: translation, summarization. The encoder-decoder architecture. The attention connects.
+
+The transformers dominate: GPT (generative), BERT (understanding). The fine-tuning adapts to task.
+
+The question answering: extract or generate. The SQuAD. The generative answers hallucinate.
+
+The commonsense reasoning: the missing knowledge. The Winograd schemas. The coreference resolution.
+
+The dialogue systems: chatbots, assistants. The task-oriented, open-domain. The retrieval augmented generation.
+
+The multilingual: one model across languages. The zero-shot transfer. The translation models.
+
+The limitations: bias, hallucination, compute cost. The evaluation.
+
+The NLP is fundamental to AI. The language is human-computer interface. The future: better understanding, generation.
+
+The ethics: bias amplification, misuse potential. The responsible development. The diverse data. The evaluation.", "meta": {"phase": 4, "topic": "nlp", "subtopic": "nlp_extended", "sequence": 224}}
+{"text": "Computer vision: extracting meaning from images. The pipeline: acquisition, preprocessing, feature extraction, analysis, understanding.
+
+The camera model: pinhole perspective. The intrinsic/extrinsic parameters. The calibration. The lens distortion.
+
+The image formation: irradiance to pixel values. The color spaces: RGB, HSV, LAB. The dynamic range.
+
+The filtering: convolution. The edge detection: Sobel, Canny. The smoothing: Gaussian, bilateral. The morphological.
+
+The features: corners, blobs, edges. The SIFT, SURF, ORB. The scale-space.
+
+The matching: feature correspondence. The RANSAC for outliers. The fundamental matrix for epipolar geometry.
+
+The structure from motion: recover 3D from sequence. The bundle adjustment. The point cloud. The SLAM.
+
+The object detection: localization + classification. The two-stage (RCNN), one-stage (YOLO). The bounding boxes.
+
+The segmentation: semantic (per pixel class), instance (distinguish objects). The U-Net, Mask R-CNN.
+
+The tracking: Kalman filter, SORT, Deep SORT. The data association. The occlusion handling.
+
+The person re-identification: across cameras. The metric learning. The triplet loss.
+
+The depth estimation: monocular, stereo. The self-supervised. The Lidar ground truth.
+
+The 3D object detection: point clouds, fusion. The point pillars,PointPillars.
+
+The visual transformers: ViT. The attention between patches. The classification, detection.
+
+The CLIP: vision-language alignment. The zero-shot image classification. The retrieval.
+
+The computer vision is solved for many tasks. The remaining: understanding, reasoning, robustness.
+
+The application: autonomous driving, medical imaging, surveillance, AR/VR. The safety-critical. The performance matters.
+
+The bias: dataset reflects bias. The fairness. The diverse data. The evaluation metrics.", "meta": {"phase": 4, "topic": "computer_vision", "subtopic": "vision_extended", "sequence": 225}}
+{"text": "Robotics: sensing, planning, acting. The robot senses environment, determines action, executes.
+
+The kinematics: motion without forces. Forward: joint angles to end-effector. Inverse: target to joint angles. The Jacobian.
+
+The dynamics: forces produce motion. Lagrange, Newton-Euler. The mass matrix. The joint limits, collisions.
+
+The perception: sensors. Lidar, camera, IMU, GPS, encoders. The fusion:互补, filtering.
+
+The localization: where am I? The particle filter, EKF, graph SLAM. The landmark-based.
+
+The mapping: what's around me? Occupancy grid. The mapping while localizing.
+
+The planning: find path. Visibility graph, PRM, RRT. The A*, Dijkstra. The optimal.
+
+The motion planning: avoid obstacles. The trajectory optimization. The CHOMP, STOMP.
+
+The control: follow trajectory. PID, LQR, MPC. The feedback.
+
+The manipulation: grasp planning. The force control. The impedance.
+
+The locomotion: legged, wheeled, aerial. The ZMP, Raibert heuristic. The flight dynamics.
+
+The multi-robot: coordination. The formation, coverage, task allocation. The communication.
+
+The ROS: Robot Operating System. The nodes, topics, services. The simulation: Gazebo.
+
+The learning: from demonstration, reinforcement. Sim-to-real transfer. The domain randomization.
+
+The safety: formal verification, monitoring. The fault detection, recovery. The standards: ISO 10218, ISO/TS 15066.
+
+The robotics combines disciplines. The mechanical, electrical, computer. The integration is challenging.
+
+The field advancing rapidly. The autonomous vehicles, warehouse, surgery. The future: robots everywhere.
+
+The societal impact: jobs displaced, created. The ethics: robot rights, responsibility.", "meta": {"phase": 4, "topic": "robotics", "subtopic": "robotics_extended", "sequence": 226}}
+{"text": "Algorithm design: the systematic development of solutions. The techniques: divide and conquer, greedy, dynamic programming, randomization.
+
+Divide and conquer: split into subproblems, solve recursively, combine. Merge sort, quicksort, FFT. Master theorem.
+
+Greedy: local optimal leads to global optimal. Huffman, Kruskal, Dijkstra. Proved by exchange argument.
+
+Dynamic programming: optimal substructure + overlapping subproblems. Memoize or tabulate. Traveling salesman, knapsack.
+
+Randomization: random choices for performance. Quicksort, randomized hashing, Monte Carlo integration.
+
+Approximation: polynomial time approximately optimal. The PTAS, FPTAS. The TSP.
+
+Online: decisions before future known. The paging, list access. The competitive analysis.
+
+Streaming: cannot store all. The count-min sketch, Bloom filter. The sublinear space.
+
+Parallel: multiple processors. The PRAM model. The map-reduce, MPI.
+
+Distributed: network of machines. The map-reduce, spark. The partition tolerance.
+
+The algorithm selection: problem determines approach. Input characteristics matter.
+
+The analysis: time, space, I/O. The asymptotic (n→∞), practical (n=actual).
+
+The constant factors matter in practice. The empirical benchmarking.
+
+The algorithm engineering: optimize constants, cache, SIMD. The performance engineering.
+
+The reproducible research: code, data, methodology published. The peer review of experiments.
+
+The key: match algorithm to problem. The insight: understand before coding. The design then implementation.", "meta": {"phase": 3, "topic": "algorithm_design", "subtopic": "design_extended", "sequence": 227}}
+{"text": "Ethics in technology: what should we do? The values embedded in systems, the consequences.
+
+The bias amplification: training data reflects historical bias. The systems perpetuate, amplify. The fairness metrics.
+
+The privacy: data collection. The aggregation provides anonymity. The re-identification possible. The differential privacy.
+
+The surveillance: facial recognition, location tracking. The Orwellian potential. The regulation: GDPR, CCPA.
+
+The transparency: explainability of AI. The black box models. The interpretable alternatives.
+
+The accountability: who is responsible? Developer, company, deployer. The chain of responsibility.
+
+The job displacement: automation replaces workers. The transition support. The universal basic income debate.
+
+The misinformation: deepfakes, bots. The detection. The platform responsibility.
+
+The access: digital divide. The technology access inequality. The education.
+
+The safety: autonomous vehicles, medical AI, lethal autonomous weapons. The regulatory capture.
+
+The sustainability: energy consumption of training. The data center carbon. The green AI.
+
+The open source: security through transparency. The supply chain security. The licensing.
+
+The competition: antitrust. The winner-takes-all. The network effects. The gatekeepers.
+
+The patents: innovation vs blocking. The troll problem. The standard essential.
+
+The ethics is not afterthought. The values designed in. The diverse teams, diverse data.
+
+The responsible AI frameworks: fairness, accountability, transparency. The certification.
+
+The ethical technology development: continuous assessment. The multi-stakeholder. The global.", "meta": {"phase": 3, "topic": "technology_ethics", "subtopic": "ethics_extended", "sequence": 228}}
+{"text": "The advanced optimization: techniques beyond simple gradient descent. The constrained, multi-objective, derivative-free.
+
+Constrained optimization: inequality and equality constraints. The penalty method: add cost for violation. The barrier: interior point methods. Lagrange multipliers.
+
+Sequential quadratic programming (SQP): approximate with QP, solve iteratively. The general for NLP.
+
+Multi-objective: Pareto front of non-dominated solutions. The scalarization: weighted sum, Tchebychev.
+
+Derivative-free: no gradient available. The direct search, Nelder-Mead, pattern search. Bayesian optimization.
+
+The Bayesian optimization: surrogate model for objective. The acquisition: expected improvement, UCB.
+
+The multi-armed bandits: explore-exploit trade-off. The ε-greedy, UCB, Thompson sampling.
+
+The contextual bandits: arm rewards depend on context. The treatment effect estimation.
+
+The reinforcement learning: state, action, reward. The MDP. The value function, policy gradient.
+
+The policy gradient: REINFORCE, actor-critic. The PPO: proximal policy optimization. Stable.
+
+The Q-learning: off-policy TD. Deep Q-Networks (DQN). Experience replay.
+
+The exploration: ε-greedy, entropy bonus, novelty. The reward shaping for sparse rewards.
+
+The inverse RL: learn reward from demonstrations. The apprenticeship learning.
+
+The multi-agent: cooperation, competition. The game theory. Nash equilibrium.
+
+The optimization is fundamental. The machine learning, control, planning all use optimization.
+
+The method selection: problem structure. Derivative available: gradient. Constraints: sequential quadratic. Black box: Bayesian.", "meta": {"phase": 4, "topic": "optimization", "subtopic": "optimization_extended", "sequence": 229}}
+{"text": "The information theory: quantify information. The entropy H(X) = -Σ p(x) log₂ p(x). The bits of uncertainty.
+
+The source coding: compress without loss. The Huffman coding. The optimal around entropy. The Kraft inequality.
+
+The channel capacity: maximum bits per channel use. The Shannon capacity C. The coding theorem.
+
+The noisy channel coding: add redundancy. The error-correcting codes. The block codes, convolutional codes.
+
+The Hamming code: single-error correcting. The minimum distance d. The t = (d-1)/2 errors.
+
+The Reed-Muller: general block code. The Golay codes perfect. No more perfect codes exist.
+
+The LDPC: low-density parity-check. Iterative decoding near capacity. The Turbo codes.
+
+The polar codes: channel polarization. The successive cancellation. Proved achieves capacity.
+
+The convolution codes: sequential. The Viterbi decoding. The soft decisions.
+
+The coding theory: trade rate vs reliability. The Shannon limit: C = max I(X;Y). Achieved.
+
+The data compression: entropy, LZ, transforms. The transform coding: DCT, wavelet.
+
+The JPEG: DCT 8x8 blocks. Quantize based on quality. Huffman coded.
+
+The video coding: motion compensation. The P-frames, B-frames. The hierarchical.
+
+The audio coding: psychoacoustic model. The MP3, AAC. The masking.
+
+The network information theory: multi-user. The Gaussian multiple access. The broadcast.
+
+The information theory is foundation. Compression, communication, learning all connected. The fundamental limits.", "meta": {"phase": 3, "topic": "information_theory", "subtopic": "information_extended", "sequence": 230}}
+{"text": "The signal processing: manipulate signals. The continuous to discrete: sampling, quantization. The Nyquist theorem.
+
+The discrete Fourier transform (DFT): frequency representation. Complexity O(n²). The FFT: O(n log n).
+
+The convolution: linear, circular. The time domain ↔ frequency domain. The convolution theorem.
+
+The filtering: FIR (finite impulse response), IIR (infinite). The z-transform.
+
+The digital filters: design methods. Window, Parks-McClellan, bilinear transform. The stability.
+
+The audio equalization: bandpass filters. The room correction. The active noise cancellation.
+
+The image processing: 2D DFT. The convolution. The enhancement, restoration.
+
+The wavelets: multi-resolution. The JPEG 2000 uses wavelets. The edge detection.
+
+The adaptive filters: LMS, RLS. The system identification, interference cancellation.
+
+The spectral estimation: periodogram, Welch. The MUSIC, ESPRIT for frequency estimation.
+
+The match filters: detect known signal in noise. Correlation detection. The radar, communications.
+
+The compressive sensing: sample below Nyquist. The sparsity exploited. The L1 reconstruction.
+
+The filter banks: perfect reconstruction. The subband coding. The wavelet packets.
+
+The modern signal processing combines math and computation. The FFT essential.
+
+The compression and analysis: transform coding. The denoising: threshold, shrinkage.
+
+The signal processing ubiquitous. Audio, images, communications, radar. The design principles universal.", "meta": {"phase": 3, "topic": "signal_processing", "subtopic": "signal_extended", "sequence": 231}}
+{"text": "The computer graphics pipeline transforms geometry to image. The pipeline stages: application, vertex, rasterization, fragment.
+
+Application stage: geometry in, handle input, output vertices. User-defined operations possible.
+
+Vertex shader: per-vertex transformations. The model, view, projection matrices. The lighting preparation.
+
+Primitive assembly: assemble vertices to primitives. Points, lines, triangles.
+
+Rasterization: convert primitives to fragments. The interpolation for attributes.
+
+Fragment shader: per-fragment operations. The shading, texturing, depth testing.
+
+Output merger: final processing. Blending, depth test, stencil. Framebuffer output.
+
+The GPU architecture: thousands of small processors. The SIMD within warps. The memory hierarchy.
+
+The programmable shaders: GLSL, HLSL. The vertex, fragment, compute.
+
+The compute shaders: GPGPU. The physics, fluid simulation.
+
+The optimization: minimize state changes. The batch draw calls. The texture atlases.
+
+The level of detail (LOD): distance-based geometry. The switching for distance.
+
+The culling: frustum, occlusion. The bounding volumes. Skip processing.
+
+The ray tracing: the future. The recursion, global illumination. The BVH acceleration.
+
+The real-time ray tracing: RTX hardware. The hybrid rendering. The denoisers.
+
+The graphics programming fundamental to games, movies, CAD. The performance optimization key.
+
+The understanding: enables effective use. The profiling: identify bottleneck.", "meta": {"phase": 3, "topic": "graphics_pipeline", "subtopic": "pipeline_extended", "sequence": 232}}
+{"text": "The software architecture: design of software systems. The components, connectors, configurations.
+
+The architectural patterns: layered, MVC, microservices, event-driven. Each trade-off.
+
+The layered: isolation of concerns. Presentation, business, data. The dependencies one way.
+
+The MVC: Model-View-Controller. The user input to model changes. View observes.
+
+The microservices: independent deployables. The bounded context. The orchestration.
+
+The event-driven: components communicate via events. The async. The loose coupling.
+
+The hexagonal architecture: ports and adapters. The testability. The external dependencies.
+
+The clean architecture: dependence rule. Entities, use cases, interface adapters, frameworks.
+
+The CQRS: Command Query Responsibility Segregation. Separate read and write models.
+
+The saga pattern: distributed transactions. Choreography, orchestration.
+
+The circuit breaker: prevent cascading failures. The timeout, fallback.
+
+The backpressure: handle overload. Signals upstream to slow down.
+
+The architecture decision records (ADRs): document decisions. The rationale.
+
+The architecture is structural. The foundation. The refactoring limited without.
+
+The documentation: diagrams, ADRs. Updated with changes.
+
+The technical leadership: architecture for team. The communication important.", "meta": {"phase": 3, "topic": "software_architecture", "subtopic": "architecture_design_extended", "sequence": 233}}
+{"text": "The testing pyramid: unit, integration, end-to-end. The base of unit tests is widest. The end-to-end narrowest.
+
+Unit tests: smallest pieces in isolation. Mock dependencies. Fast. Many.
+
+Integration tests: component interactions. Real dependencies. Slower. Fewer.
+
+End-to-end tests: complete flows. Slowest. Fewest. The full system.
+
+Test-driven development (TDD): write test first. Then code to pass. Then refactor.
+
+The red-green-refactor: fail, pass, clean. The cycle discipline.
+
+The test coverage: lines executed. Not sufficient: need assertions. Not all code equal.
+
+The property-based testing: generate inputs. Check properties. The fuzzing.
+
+The fuzzing: random inputs. Observe crashes. Bug finding.
+
+The mutation testing: introduce bugs. Tests should fail. Detect test weakness.
+
+The performance testing: load, stress. Identify bottlenecks. The profiling.
+
+The security testing: penetration testing. Vulnerability scanning. The OWASP.
+
+The chaos engineering: intentionally break. Observe failures. Build resilience.
+
+The test maintenance: technical debt indicator. Test rot. Old tests disable or remove.
+
+The testing is quality. Not optional. The safety net.
+
+The test-driven development builds quality in. The legacy code: add tests when fixing.
+
+The testing requires discipline. The maintainable code helps testabilility. The dependency injection.
+
+The testing pyramid guides. Unit tests fast feedback. Integration tests check integration. E2E flows.", "meta": {"phase": 3, "topic": "testing", "subtopic": "testing_extended", "sequence": 234}}
+{"text": "The concurrency: multiple things simultaneously. The threads, processes, events. Each model trade-offs.
+
+Threads: shared memory, explicit synchronization. The race conditions, deadlocks, livelocks.
+
+Processes: separate address spaces. The IPC for communication. More overhead, isolation.
+
+Event-driven: single thread, event loop. The async/await, callbacks. The non-blocking.
+
+Coroutines: lightweight threads. Cooperative scheduling. The async/await syntax.
+
+The actor model: messages between actors. Each actor handles one at a time. The location transparency.
+
+Concurrent collections: lock-free, thread-safe. The queues, maps. Atomic operations.
+
+The synchronization primitives: mutex, semaphore, condition, barrier, latch, countdown.
+
+The memory model: visibility. The happens-before. The volatile, synchronized.
+
+The thread pools: reuse threads. The fixed, cached, scheduled pools.
+
+The parallel streams: Java streams, parallel Python. The map-reduce patterns.
+
+The distributed computing: threads across machines. The RPC, message passing.
+
+The concurrency problems: race conditions, deadlocks, starvation, livelocks.
+
+The prevention: consistent lock ordering, timeouts, deadlocks detection.
+
+The testing concurrency: inject delays, stress tests. The Heisenbugs.
+
+The concurrency is hard. The best: minimize shared mutable state. The immutable. The actor.", "meta": {"phase": 3, "topic": "concurrency", "subtopic": "concurrency_extended", "sequence": 235}}
+{"text": "Software performance: making it fast. The measurement before optimization. The profiling identifies bottleneck.
+
+The performance measurement: latency, throughput, resource utilization. The tools for each.
+
+The latency: response time. p50, p95, p99. The outliers matter.
+
+The throughput: requests per second. The saturation. The bottleneck resource.
+
+The CPU profiling: samples stacks. Identifies hot code. The flame graphs.
+
+The memory profiling: heap dumps. The allocation tracking. The GC logs.
+
+The I/O profiling: disk, network. The async, batching.
+
+The database profiling: query plans, slow queries. The indexes, query rewriting.
+
+The web profiling: Chrome DevTools. The waterfall.
+
+The caching: data closer. The cache hit/miss ratio. The invalidation.
+
+The batching: amortize overhead. The batch operations, async I/O.
+
+The prefetching: predict and load. The hardware support.
+
+The indexing: database queries. The covering indexes.
+
+The denormalization: optimize reads. Trade write performance.
+
+The horizontal scaling: add instances. The load balancer. The sharding.
+
+The optimization: measure before. The bottleneck not where thought. The code insights wrong.
+
+The premature optimization: root of all evil. The measure first. Then optimize.", "meta": {"phase": 3, "topic": "performance", "subtopic": "performance_extended", "sequence": 236}}
+{"text": "The debugging: find bugs. The scientific method: hypothesis, experiment, fix.
+
+The symptoms: error messages, crashes, wrong output. The symptoms guide.
+
+The reproduction: test case that fails. Smaller is better. Binary search.
+
+The instrumentation: logging, breakpoints. The IDE debugger. The production tools.
+
+The bisect: find regression. Binary search code history. The git bisect.
+
+The isolation: minimize input. Simplest test case. The root cause simpler.
+
+The hypothesis: what's causing? Design experiment to test. The evidence confirms/disproves.
+
+The observation: careful reading. The error message means something. Stack traces ordered.
+
+The code reading: trace flow. The debugging is reading code.
+
+The instrumentation: add logging. The breakpoints pause execution.
+
+The different inputs: boundary cases, empty, extremes. These show bugs.
+
+The state inspection: variables at point. The call stack shows history.
+
+The asking: rubber duck debugging. The explaining reveals.
+
+The taking breaks: step away, return. Fresh eye finds.
+
+The documentation: bug trackers. The patterns identify. The tests prevent.
+
+The debugger is not cheating. The good debugging uses all techniques. The code reading is often faster.
+
+The debugging is skill. The practice gets better. The complex code: debugging essential.", "meta": {"phase": 2, "topic": "debugging", "subtopic": "debugging_extended", "sequence": 237}}
+{"text": "The code review: systematic examination. The finding bugs, improving, sharing knowledge.
+
+The review process: author requests, reviewer examines, feedback provided.
+
+The focus: correctness, security, performance, readability, testing. Not style (automate).
+
+The reviewer checklist: logic errors, edge cases, error handling, security, performance.
+
+The feedback: specific, actionable. The suggestions not commands.
+
+The tone: kind, specific, constructive. The blameless.
+
+The author: prepare, short description, responsive feedback, iterate.
+
+The benefits: bug detection, knowledge sharing, consistency, learning.
+
+The best reviewers: senior for architecture, author for details.
+
+The modern review: GitHub PR, GitLab MR. Integrated workflow.
+
+The automated checks: linting, testing, security scanning. Reduces reviewer load.
+
+The review burden: small changes, incremental. Large changes are hard.
+
+The code review improves code. Knowledge spreads. The team alignment.
+
+The review is conversation. The author learns, reviewer learns.
+
+The importance: catching bugs early. The best review prevents bugs.
+
+The code review standard. The quality built in, not fixed later.", "meta": {"phase": 2, "topic": "code_review", "subtopic": "code_review_extended", "sequence": 238}}
+{"text": "The APIs (Application Programming Interfaces) are boundaries. The contract between components. The explicit, stable, documented.
+
+The REST: resources via URIs. HTTP methods. Stateless. JSON.
+
+The GraphQL: query language for APIs. Client specifies. Over-fetching solved.
+
+The gRPC: protocol buffers. HTTP/2. Binary. Bi-directional.
+
+The WebSocket: full duplex. Real-time communication.
+
+The webhooks: event-driven. HTTP callbacks. The reverse.
+
+The versioning: URL, header, query. Deprecation.
+
+The rate limiting: prevent abuse. Token bucket, leaky bucket.
+
+The authentication: API keys, OAuth, JWT. Bearer tokens.
+
+The pagination: offset, cursor. The consistent.
+
+The error handling: codes, messages. The documentation.
+
+The versioning: breaking changes. Non-breaking.
+
+The documentation: examples, reference. Swagger, OpenAPI.
+
+The SDKs: language-specific. The generated.
+
+The contract testing: consumer-driven. The integration.
+
+The API design matters: client experience.
+
+The Web API design: REST conventions. GraphQL flexibility.
+
+The best APIs: simple, consistent, documented, tested.
+
+The API is contract. The client depends on stability. The versioning.", "meta": {"phase": 3, "topic": "api_design", "subtopic": "api_design_extended", "sequence": 239}}
+{"text": "The Git: version control. The snapshots not deltas. Distributed.
+
+The concepts: repository, working directory, staging, commit.
+
+The add: stage changes. The commit: permanent snapshot.
+
+The status: modified, staged, committed. The show state.
+
+The diff: what's changed. The line-by-line differences.
+
+The log: commit history. The filtered by author, date, message.
+
+The branches: divergent history. The lightweight.
+
+The merge: combine branches. Automatic where possible. Conflicts manual.
+
+The rebase: linear history. Rewrite commits onto base.
+
+The pull: fetch + merge. The fetch: download, not merge.
+
+The push: upload commits. The remote.
+
+The reset: unstage, undo changes. The soft, mixed, hard.
+
+The checkout: switch branches. The discard changes.
+
+The stash: save changes temporarily. The apply.
+
+The remote: tracked repository. The fetch, pull, push.
+
+The branching model: Git-flow, trunk-based. Feature branches.
+
+The Git is foundation. The collaboration enables. The understanding enables.", "meta": {"phase": 2, "topic": "version_control", "subtopic": "git_extended", "sequence": 240}}
+{"text": "The data structures: organize data for access. The choice determines operations.
+
+The arrays: contiguous memory. Random access O(1). Insert O(n). The cache-friendly.
+
+The linked lists: nodes + pointers. Insert O(1) at known position. Access O(n). The recursion natural.
+
+The stacks: LIFO. Push, pop, peek. The recursion replacement.
+
+The queues: FIFO. Enqueue, dequeue. The breadth-first search.
+
+The trees: hierarchical nodes. Each node children. Binary trees have ≤2.
+
+The binary search trees: property for ordering. O(log n) search if balanced.
+
+The self-balancing: AVL, red-black. O(log n) guaranteed.
+
+The heaps: priority queue. Extract-min/max O(1), insert O(log n). The heap sort.
+
+The hash tables: hash function + array. O(1) average. The collisions.
+
+The tries: prefix trees. Autocomplete. The memory trade.
+
+The skip lists: probabilistic balanced. Simpler than balanced trees.
+
+The graphs: vertices + edges. Adjacency list, matrix. The choice depends on density.
+
+The data structure selection: operations required. Space available. Access patterns.
+
+The combination: B-trees for databases. Bloom filters for membership. LRU caches.
+
+The fundamental: understand to choose. The implementation available in libraries.", "meta": {"phase": 2, "topic": "data_structures", "subtopic": "structures_extended", "sequence": 241}}
+{"text": "Web development: client and server. State, behavior, presentation separation.
+
+Client: HTML structure. CSS present. JavaScript behavior. Single page applications.
+
+Server: serve static, dynamic. Handle requests, generate responses.
+
+Database: persist state. Relational, NoSQL. Migrations.
+
+Authentication: sessions, tokens. Cookies. JWT.
+
+Security: XSS, CSRF, injection. Headers.
+
+The frontend frameworks: React, Vue, Angular. Component model.
+
+The state management: centralized, reactive.
+
+The backend frameworks: Express, Django, Rails. Convention.
+
+The ORM: object-relational mapping. Models map tables. Queries language.
+
+The API design: RESTful, GraphQL. Pagination.
+
+The caching: CDN, application cache, database cache. Invalidation.
+
+The build: bundling, minification. Assets.
+
+The testing: unit, integration, E2E. Jest, Cypress.
+
+The deployment: containers, CI/CD. Build pipelines. Heroku, AWS.
+
+The modern web is full-stack. Front, back, data. All important.
+
+The full-stack developer: all layers. Full integration.", "meta": {"phase": 3, "topic": "web_development", "subtopic": "web_extended", "sequence": 242}}
+{"text": "The development environment: the workspace. The setup affects productivity.
+
+The shell: command line. Bash/Zsh. Aliases, functions.
+
+The editor: VS Code, Vim, Emacs. Extensions, configuration.
+
+The language servers: IntelliSense, linting, formatting.
+
+The terminals: iTerm, tmux, multiplexers.
+
+The version control: Git. The configuration.
+
+The debugging: IDE integrated.
+
+The documentation: the code docs. The READMEs.
+
+The tools: makefiles, scripts, runbooks.
+
+The reproducibility: same steps. Docker, Nix.
+
+The configuration management: dotfiles.
+
+The productivity: keyboard orientation. Mouse slowing.
+
+The ergonomics: physical health matters.
+
+The development velocity: environment optimization. The startup time.
+
+The new machine setup: scripts automate.
+
+The environment as code: infrastructure.
+
+The continuous learning: tools evolve. The tool selection. The productivity compounds.
+
+The environment: the workspace. The productive workspace enables.", "meta": {"phase": 1, "topic": "development_environment", "subtopic": "environment_extended", "sequence": 243}}

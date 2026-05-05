@@ -1,0 +1,239 @@
+{"text": "I define computer architecture as the design of computing systems. The fundamental components: processor, memory, I/O, interconnect. The design spaces for each determine the system characteristics.
+
+The instruction set architecture (ISA): the visible interface between hardware and software. The CISC vs RISC debate: complex vs reduced instructions. RISC: load/store, fixed-length, many registers. CISC: variable-length, memory operands, fewer registers. Modern practice converges to RISC principles.
+
+The microarchitecture: the implementation of the ISA. The pipeline: overlap instruction execution. The stage count determines latency and throughput. The hazards: structural (resource conflicts), data (dependencies), control (branches).
+
+The branch prediction: static (always taken), dynamic (history-based), two-level (global + local). The important prediction: instruction is not known until fetched. Stall penalty unacceptable.
+
+The out-of-order execution: rename registers, dispatch instructions out of program order. The physical registers more than logical. The key: WAR and WAW hazards eliminated by rename.
+
+The speculative execution: execute down mispredicted path, discard if wrong. Recover by snapshot. The value: branch doesn't stall.
+
+The memory hierarchy: registers, L1, L2, L3, main memory. The latency: L1 ≈ 1ns, L2 ≈ 3-10ns, main ≈ 50-100ns. The cache misses determine performance.
+
+The cache coherence: MESI protocol for multi-core. Modified, Exclusive, Shared, Invalid per cache line. The transitions between states track sharing and ownership.
+
+The virtual memory: address translation. Page tables map virtual to physical. The TLB: translation lookaside buffer. The multi-level page tables compress the directory.
+
+The I/O: polling vs interrupt-driven. The DMA: direct memory access offloads CPU. The storage: SATA, NVMe.
+
+The interconnect: bus, crossbar, network-on-chip. The bandwidth and latency determine communication cost. The topology determines scaling.
+
+The performance measurement: Amdahl's law limits speedup. Instruction count, CPI (cycles per instruction), clock rate. The CPI determines through-put.
+
+The power: dynamic (switching), static (leakage). Dark silicon: not all transistors active. The voltage scaling: critical for mobile.
+
+The parallel: SIMD (single instruction multiple data), multi-threading, multi-core. The SIMD: vector instructions. The thread: hardware context.
+
+The GPU: massive parallelism. Thousands of simple cores. Graphics pipeline but general computation. The CUDA/OpenCL programming model.
+
+The architecture is the foundation. All software builds on it. Understanding enables optimization. The compiler generates code. The OS manages resources. The application uses abstractions.
+
+The key insight: the trade-offs. Performance vs power. Latency vs through-put. Complexity vs generality. No perfect architecture, only perfect fit for problem.", "meta": {"phase": 2, "topic": "computer_architecture", "subtopic": "architecture_extended", "sequence": 215}}
+{"text": "The compiler: the translator from source code to executable. The phases: lexical analysis (tokens), parsing (structure), semantic analysis (meaning), optimization, code generation.
+
+The lexer: regular expressions define tokens. The finite automaton accepts. The token stream is output. Comments and whitespace discarded. Keywords recognized.
+
+The parser: context-free grammar defines structure. The recursive descent parses from grammar. LL(k): left-to-right leftmost with k lookahead. LR(k): left-to-right rightmost reversed.
+
+The parse tree: concrete syntax. The abstract syntax tree (AST): internal representation. The nodes are operators, leaves are operands.
+
+The semantic analysis: type checking, scope rules, name resolution. The symbol table tracks definitions. The type system enforces consistency.
+
+The intermediate representation (IR): platform-independent. Three-address code, SSA (single static assignment). The transformations operate on IR.
+
+The dataflow analysis: reaching definitions, live variables, available expressions. The bitset data structures enable efficient analysis.
+
+The constant propagation: if known, substitute constant. The copy propagation: if same value, substitute. The dead code elimination: unreachable code.
+
+The loop optimization: strength reduction, induction variables, loop invariant code motion. The key: find loop-induction variables.
+
+The inlining: substitute function body for call. The key: reduces call overhead, enables further optimization. The threshold balances growth.
+
+The register allocation: choose which values in registers. NP-hard. The graph coloring approximates. The graph is register interference.
+
+The instruction scheduling: order instructions to minimize stalls. The dependence graph constrains order. The list scheduling is heuristic.
+
+The code generation: map IR to target ISA. The instruction selection: tree covering. The peephole optimization: local improvements.
+
+The calling conventions: caller-save, callee-save registers. The stack frame layout. The prologue and epilogue.
+
+The debugging: symbol tables. The DWARF format. The line numbers, variable locations. Breakpoints set by line number.
+
+The whole program: link-time optimization. The interprocedural analysis across files. The whole program understanding enables better optimization.
+
+The just-in-time compilation: compile at run time. The JIT uses profiling. The hot paths compiled aggressively. The cold code interpreted.
+
+The garbage collection: automatic memory management. The marking: trace reachable. The sweeping: reclaim unmarked. The compacting: move objects.
+
+The JIT vs AOT: trade performance for compile time. The profile-guided optimization: use runtime data. The adaptive optimization.
+
+The compiler is the bridge. From human-readable code to machine-executable. Understanding enables better code and debugging.", "meta": {"phase": 2, "topic": "compiler_design", "subtopic": "compiler_extended", "sequence": 216}}
+{"text": "The operating system: the resource manager. The three abstractions: process (execution), address space (memory), file (I/O). The virtualization enables multiple programs.
+
+The process: execution context. The program counter, registers, stack, heap, open files. The fork: copy parent process. The exec: replace program. The exit: terminate.
+
+The scheduling: share CPU among processes. The preemptive: interrupt-driven. The round-robin: each gets time slice. The priority: critical gets more.
+
+The context switch: save state, load new state. The overhead limits granularity. The 1ms switch is typical. The cache misses cost.
+
+The address space: each process has own virtual memory. The translation: virtual to physical. The page tables map.
+
+The protection: one process cannot access another. The pages have permissions. The supervisor mode for OS.
+
+The virtual memory: pages on disk when not in RAM. The demand paging: load when accessed. The working set: resident pages.
+
+The page replacement: LRU approximation. The clock algorithm: second chance. The Thrashing: all pages in use, constant faults.
+
+The inter-process communication: pipes, message queues, shared memory, signals. The pipes are byte streams. The signals are asynchronous.
+
+The synchronization: mutex, semaphore, condition variable. The critical section: only one in at a time. The deadlock: circular wait.
+
+The deadlock conditions: mutual exclusion, hold-and-wait, no preemption, circular wait. All must hold. Breaking any prevents deadlock.
+
+The file system: named collection of bytes. The directories organize. The inodes store metadata. The free space maps allocate.
+
+The file operations: open, read, write, seek, close. The buffering: hide disk latency. The write-back: accumulate.
+
+The directory structure: hierarchical. Each file: path from root. The mount: attach file system.
+
+The permissions: owner, group, other. Read, write, execute. The ACL: access control lists for fine-grained.
+
+The networking: sockets connect. TCP: reliable stream. UDP: unreliable datagram. The port numbers identify service.
+
+The OS is the foundation. From bare metal to running program. Understanding enables debugging and optimization. The virtualization: multiple virtual machines.", "meta": {"phase": 3, "topic": "operating_systems", "subtopic": "os_extended", "sequence": 217}}
+{"text": "The database: structured data storage and retrieval. The relational model: tables of rows. Primary key uniquely identifies. Foreign key references another.
+
+SQL: structured query language. SELECT: retrieve columns. FROM: specify tables. WHERE: filter rows. JOIN: combine tables.
+
+The join: cross product, filter matching, project result. The nested loop join: O(n*m). The hash join: build hash table, probe. The merge join: sorted inputs.
+
+The index: accelerates access. The B-tree: balanced, logarithmic. The index entry points to data. The covering index includes data.
+
+The query optimization: choose access path, join order, join method. The cost-based optimizer uses statistics. The query planner.
+
+The normalization: reduce redundancy. 1NF: atomic values. 2NF: no partial dependencies. 3NF: no transitive dependencies. BCNF: stronger.
+
+The transactions: ACID properties. Atomicity: all or nothing. Consistency: valid state. Isolation: serializable. Durability: committed persists.
+
+The isolation levels: read uncommitted (dirty reads), read committed (non-repeatable), repeatable read (phantom), serializable (correct).
+
+The two-phase locking: growing phase acquires, shrinking releases. The deadlock detection: timeout or wait graph.
+
+The write-ahead logging (WAL): log before data. The undo log: reverse operations for rollback. The redo log: replay for recovery.
+
+The ARIES: the standard recovery algorithm. Log sequence numbers. Checkpoint, analysis, redo, undo phases.
+
+The NoSQL: not only SQL. Key-value stores: get/put. Document stores: flexible schema. Column stores: wide rows. Graph stores: edges/vertices.
+
+The CAP theorem: consistency, availability, partition tolerance. Choose two. Partition is reality: must choose CP or AP.
+
+The eventual consistency: relax for availability. Tolerant to partitions. Updates propagate asynchronously. Conflicts resolved later.
+
+The NewSQL: SQL + distributed + ACID. New concurrency protocols. Spanner, CockroachDB. True balance.
+
+The database is the foundation for persistent data. Understanding enables both performance and correctness. The ACID vs CAP trade-off determines architecture.", "meta": {"phase": 3, "topic": "database_systems", "subtopic": "database_extended", "sequence": 218}}
+{"text": "The network: communication between computers. The layers: physical, link, network, transport, application. Each layer adds capability.
+
+The physical: electrical, optical, radio signals. Encoding: NRZ, Manchester. Modulation: amplitude, frequency, phase.
+
+The Ethernet: the LAN (local area network). MAC addresses: unique 48-bit. Switches learn ports. CSMA/CD: collision detection.
+
+The WiFi: wireless. CSMA/CA: collision avoidance. RTS/CTS: request to send/clear to send. The hidden node problem.
+
+The IP: network addressing. IPv4: 32-bit addresses, exhaustion. IPv6: 128-bit addresses. TTL: time to live.
+
+The routing: OSPF, BGP. Link-state: flooding for topology. Distance-vector: Bellman-Ford. BGP: policy routing.
+
+The TCP: reliable, ordered, flow-controlled. Three-way handshake. Sliding window. Congestion control.
+
+The congestion control: AIMD (additive increase multiplicative decrease). Slow start. Fast recovery. Reno, Cubic algorithms.
+
+The UDP: unreliable, no flow control. For latency-sensitive. DNS, DHCP, VoIP use UDP. Reliability added at application.
+
+The TLS: secure transport. Handshake: negotiate algorithms, verify certificate, derive keys. Record: encrypt/decrypt.
+
+The DNS: name to address. Hierarchical distributed. Caching. TTL expires entries. DNSSEC authenticates.
+
+The HTTP: request-response. Methods: GET, POST, PUT, DELETE. Headers: metadata. Status codes: result.
+
+The REST: representational state transfer. Resources via URIs. Standard methods. Stateless.
+
+The WebSocket: bidirectional. HTML5. The message framing. The ping/pong for keep-alive.
+
+The gRPC: remote procedure call. Protocol buffers for serialization. HTTP/2 for transport. Bidirectional streaming.
+
+The network is the foundation for distributed computing. The protocols stack. Understanding enables debugging.", "meta": {"phase": 3, "topic": "networking", "subtopic": "network_extended", "sequence": 219}}
+{"text": "The computer security: protect confidentiality, integrity, availability. The CIA triad. The threats: interception, modification, denial.
+
+The authentication: prove identity. Something you know (password), have (token), are (biometric). Multi-factor increases security.
+
+The password storage: never store plain. The salted hash. The bcrypt, scrypt, Argon2: slow for brute force. The rainbow tables attack salted.
+
+The access control: who can do what to which resource. The DAC: discretionary (owner decides). MAC: mandatory (label-based). RBAC: role-based.
+
+The vulnerabilities: buffer overflow, SQL injection, cross-site scripting. The mitigation: bounds checking, parametrized queries, encoding.
+
+The injection: untrusted input executed. The SQL injection: modify query. The command injection: shell. The input validation.
+
+The cross-site scripting (XSS): inject script in page. Stored: in database. Reflected: in request. DOM-based: client-side.
+
+The cross-site request forgery (CSRF): trick user to request. The anti-CSRF token. SameSite cookie.
+
+The session hijacking: steal session cookie. The HttpOnly prevents JavaScript access. Secure cookie over TLS.
+
+The encryption in transit: TLS. The certificate verifies identity. The cipher suites define algorithms. The forward secrecy protects past.
+
+The encryption at rest: full disk, database, file. The keys must be protected. The key management.
+
+The vulnerability disclosure: find and report. Responsible disclosure: time to fix. CVE identifies. Patches fix.
+
+The security through obscurity: Kerckhoffs's principle: security in key, not algorithm. The code review finds bugs.
+
+The penetration testing: ethical hacking. Red team attacks. Blue team defends. The purple team shares.
+
+The security model: assume breach. Defense in depth. Least privilege. Minimize attack surface.
+
+The security is not feature. The security is process. Continuous monitoring. Regular audits. Incident response plan.
+
+The security economics: risk assessment. Cost of mitigation vs expected loss. Not everything equally protected.
+
+The security starts with design. The security continues with implementation. The security maintained with operation.", "meta": {"phase": 3, "topic": "computer_security", "subtopic": "security_extended", "sequence": 220}}
+{"text": "The software engineering: systematic production of software. The process: requirements, design, implementation, testing, deployment, maintenance.
+
+The requirements: what the system must do. Functional: features. Non-functional: performance, security. The use cases describe scenarios.
+
+The design: architecture, modules, interfaces. The patterns: MVC, layered, microservices. The architecture documents decisions.
+
+The implementation: write code. The source control tracks changes. The review processes changes. The style guides ensure consistency.
+
+The testing: unit, integration, system, acceptance. The test-driven development: test first, then implement to pass.
+
+The continuous integration (CI): build and test each change. The continuous deployment (CD): deploy each change. The pipeline automates.
+
+The version control: Git. The branch per feature. The PR merges after review. The tag marks releases.
+
+The software metrics: lines of code, cyclomatic complexity, coupling, cohesion. The churn: how much changes.
+
+The technical debt: shortcuts that cost later. The interest: slower future development. The payment: refactoring.
+
+The refactoring: improve structure without changing behavior. Theboy scout rule: leave code better than found.
+
+The patterns: Gang of Four (creational, structural, behavioral). Enterprise patterns. Domain-driven design patterns.
+
+The agile methods: iterative development. Sprint: short timebox. Scrum: roles, ceremonies. Kanban: visualize flow.
+
+The DevOps: development + operations. The shared responsibility. The shared metrics. The blameless postmortem.
+
+The SRE: site reliability engineering. SLO (service level objective): target. SLA: contract. SLI: measurement.
+
+The monitoring: metrics, logs, traces. The alerting: notify on issues. The on-call: respond.
+
+The software engineering is team sport. The communication matters. The architecture enables. The quality is built in. The deployment automated.
+
+The code is read more than written. The readability matters. The documentation matches. The tests document expectations.
+
+The best practices: YAGNI (you aren't gonna need it), KISS (keep it simple, stupid), DRY (don't repeat yourself).
+
+The key insight: working software over comprehensive documentation. Responding to change over following a plan. Individuals and interactions over processes and tools.", "meta": {"phase": 3, "topic": "software_engineering", "subtopic": "engineering_extended", "sequence": 221}}

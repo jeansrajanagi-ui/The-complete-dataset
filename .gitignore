@@ -1,0 +1,16 @@
+# Ignore large model files
+*.pt
+*.pth
+*.ckpt
+
+# Ignore large bulk data files
+phase*_bulk/
+
+# Ignore temporary files
+*.tmp
+*.log
+
+# Keep scripts and documentation
+!scripts/
+!.gitignore
+!README.md
